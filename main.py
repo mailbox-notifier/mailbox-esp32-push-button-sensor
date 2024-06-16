@@ -1,3 +1,46 @@
+"""
+ESP32 Mailbox Monitoring System
+
+This script is designed to run on an ESP32 microcontroller to monitor the state of a physical mailbox using a button
+sensor.
+It leverages the Wi-Fi capability of the ESP32 to send HTTP POST requests to an AWS API endpoint, indicating the state
+of the mailbox (open or closed). An LED is used to provide a visual indication of the mailbox state.
+
+Components:
+1. Button Sensor: Detects the state of the mailbox door (open or closed).
+2. LED: Indicates the current state of the mailbox for local visualization.
+3. Wi-Fi: Connects to a specified Wi-Fi network to enable HTTP communication.
+
+Functionality:
+1. State Detection:
+   - The button sensor detects whether the mailbox door is open or closed.
+   - The ESP32 monitors the state of the button sensor and detects changes in the mailbox state.
+
+2. State Notification:
+   - Upon detecting a change in the mailbox state, the ESP32 sends an HTTP POST request to the configured API endpoint.
+   - The POST request includes information about the mailbox state (open or closed).
+
+3. Wi-Fi Connectivity:
+   - The ESP32 connects to a specified Wi-Fi network using provided SSID and password.
+   - Handles reconnection logic in case the connection is lost.
+
+4. LED Indication:
+   - The LED is turned on when the mailbox is open and turned off when the mailbox is closed.
+
+Configuration:
+- Wi-Fi SSID and password need to be configured in the script for the ESP32 to connect to the internet.
+- API endpoint URL for sending HTTP POST requests must be specified.
+
+Dependencies:
+- MicroPython: This script is intended to be run on MicroPython firmware on the ESP32.
+- urequests: A MicroPython library for making HTTP requests.
+
+Usage:
+1. Flash MicroPython firmware on the ESP32.
+2. Upload this script to the ESP32.
+3. Configure the Wi-Fi credentials and API endpoint URL in the script.
+4. Run the script to start monitoring the mailbox state.
+"""
 import time
 
 import machine
