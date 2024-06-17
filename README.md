@@ -32,7 +32,8 @@ use micropython on an esp32 to sense (snail) mailbox door status
             - Deep sleep mode: 10 µA
             - Power down mode: 5 µA
         - **Wireless Connectivity**:
-            - **Wi-Fi**: 802.11 b/g/n, supports WPA/WPA2/WPA 3 <span style="color:red">(NOTE: 2.4GHz ONLY)</span>
+            - **Wi-Fi**: 802.11 b/g/n, supports WPA/WPA2/WPA 3 <span style="color:red">(NOTE: This supports 2.4GHz
+              ONLY)</span>
             - **Bluetooth**: v4.2 BR/EDR and BLE (Bluetooth Low Energy)
 - **Mini Push-Button Sensor**
     - Specifications
@@ -62,13 +63,33 @@ use micropython on an esp32 to sense (snail) mailbox door status
 
 ## 3. Hardware Parts List
 
-- **ESP32 Development Board**
-- **Button Sensor (e.g., tactile button)**
-- **LED (any color)**
-- **Breadboard and Jumper Wires**
-- **Power Supply (e.g., USB power adapter)**
-- **Enclosure for ESP32 (optional, for protection)**
-- **Mounting Tape or Screws (for securing components in the mailbox)**
+- **[ESP32 Development Board](https://a.co/d/2Oi5t2b)**
+- **[Mini Push-Button](https://a.co/d/c61xlEq)**
+- **[LED](https://a.co/d/eQ3HtXN)**
+- **[Power Supply](https://a.co/d/h5F5HNl)**
+- **[Magnetic Tape](https://a.co/d/7UWJH3v)**
+    - Use this to secure the LED-in-a-box to the inside back of the mailbox
+- **[Landscape Staples](https://a.co/d/4aTIB0H)**
+    - Use these to secure the 2-conductor cable on the ground out to the mailbox
+- **[Small Plastic Junction Box](https://a.co/d/eowBGb8)**
+- **[PVC Plastic Sheets](https://a.co/d/bwncuAZ)**
+    - Use this to create a 6"x6" square for the ESP32 and DC Converter
+- **[2 Conductor Low Voltage Cable](https://a.co/d/1jcLQgg)**
+- **[Solder Seal Connectors](https://a.co/d/aJ6IwWt)**
+    - Use this to connect works that then connect directly to the RGB LED pins
+- **[4 Conductor Low Voltage Cable](https://a.co/d/1CqPPfc)**
+    - Use this to connect from the esp32 to the RGB LED box
+- **[Male Micro-USB Adapter](https://a.co/d/2vxhkQN)**
+    - Use this to connect from the DC Converter to the ESP32
+- **[Male and Female Spade Connectors (optional)](https://a.co/d/fMHZ0SU)**
+    - Use these between the 2-conductor cable and the DC power supply and between the mini-usb adapter and the DC
+      Converter output. But, you could just use solder seal connectors instead.
+- **[Dupont wire Female-Female connectors](https://a.co/d/gnr5P9D)**
+    - Use these to connect to the pins on the RGB LED. Cut them in half and join the 4-conductor cable with solder seal
+      connectors.
+- **[Breakout Board](https://a.co/d/0UoR812)**
+- **[Magnetic Cable Zip Tie Base](https://a.co/d/4aTIB0H)**
+    - Mount these on each corner of the circuit board. They secure the circuit board to the underside of the mailbox
 
 ## 4. Hardware Assembly
 
@@ -201,3 +222,5 @@ use micropython on an esp32 to sense (snail) mailbox door status
 ![](.README_images/mailbox-inside-back-view.png)
 
 ![](.README_images/mailbox-push-button-side-view.png)
+
+![](.README_images/led-in-a-box.png)
